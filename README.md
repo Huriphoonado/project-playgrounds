@@ -13,6 +13,8 @@ Finally, you receive **real-time analytics** visualizing how people around the w
 
 [Image showing some diagrams, maybe a map.]
 
+***
+
 ## Who Project Playgrounds Is For:
 **Parents** and **Teachers** exposing their children to the great works of art.
 
@@ -25,6 +27,9 @@ Finally, you receive **real-time analytics** visualizing how people around the w
 **Anyone** who has ever had a question about or desire to dive deeper in a work of art.
 
 [A row of people of all different sizes and colors]
+
+***
+
 
 ## We are just getting started.
 ### Sign up below to get in touch and become an early partner.

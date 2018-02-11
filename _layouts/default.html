@@ -25,11 +25,54 @@
     <section class="main-content">
       {{ content }}
 
+      <script type="text/javascript">var submitted=false;</script>
+      <div class="form-container">
+          <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdrAviK5zW12H4KsbJsz70DdIXq1yag66rNp2sNYy3Piw92Bw/formResponse?" target="hidden_iframe" onsubmit="return val_form()">
+              <input type="text" name="entry.1977597640" id="entry.1977597640" placeholder="Your Name"><br />
+              <input type="text" name="entry.405132639" id="entry.405132639" placeholder="Your Organization"><br />
+              <input type="email" name="entry.175918401" id="entry.175918401" placeholder="Your Email"><br />
+              <input type="submit" value="Submit" id="submit-button" class="submit-btn">
+              <span id='error-text'></span>
+          </form>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+      </div>
+
+      <script type="text/javascript">
+      function val_form() {
+          let gForm = document.getElementById('gform');
+          let eText = document.getElementById('error-text');
+          let nmElem = document.getElementById('entry.1977597640').value;
+          let ogElem = document.getElementById('entry.405132639').value;
+          let emElem = document.getElementById('entry.175918401').value;
+          let sbtn = document.getElementById('submit-button');
+
+
+          if (nmElem.length == 0 || ogElem.length == 0 || emElem.length == 0) {
+              eText.innerHTML = '';
+              eText.append("Whoops! Please fill out all the fields.");
+              return false;
+          }
+          else {
+              submitted = true;
+              eText.innerHTML = '';
+              eText.append("Thank You! We'll be in touch soon.");
+              console.log(sbtn);
+              sbtn.disabled = true;
+              return true;
+          }
+      }
+      /*let gForm = document.getElementById('gform');
+      console.log(gForm)
+      gForm.addEventListener('submit', function(e) {
+          gForm.append("Thanks! We'll be in touch soon.")
+      });*/
+      </script>
+
       <footer class="site-footer">
-        We are a team of technologists, designers, and composers from NYU.
+        We are a team of technologists, designers, and composers from NYU responsible for the <a href="https://apps.musedlab.org/groovepizza" target="_blank">Groove Pizza</a>, <a href="https://apps.musedlab.org/aqwertyon" target="_blank">AQWERTYON</a>, and <a href="https://apps.musedlab.org/variation-playground/" target="_blank">Variation Playgrounds</a>.
       </footer>
     </section>
-    <img src="assets/images/diana-mountains.svg" class='footer-image'/>
+    <img src="assets/images/diana-mountains2.svg" class='footer-image'/>
 
     {% if site.google_analytics %}
       <script type="text/javascript">
