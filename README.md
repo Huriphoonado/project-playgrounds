@@ -1,7 +1,7 @@
-# A deep learning platform to reach new audiences and promote active engagement in the arts.
+# We are building a creative learning platform to reach new audiences and promote active arts engagement, and we need your help.
 
 ## How It Works:
-First, our team of educators and technologists build **custom learning modules** around your music/art/culture.
+First, our team of educators and technologists build **custom learning modules** around your music/art/culture. Think, interactive podcasts.
 
 [Image showing a musical score -> web app on a screen]
 
@@ -13,6 +13,10 @@ Finally, you receive **real-time analytics** visualizing how people around the w
 
 [Image showing some diagrams, maybe a map.]
 
+***
+# Music should not merely be heard.
+# Art should not just be seen.
+# It must questioned, explored, and responded to.
 ***
 
 ## Who Project Playgrounds Is For:
