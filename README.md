@@ -1,11 +1,11 @@
-# We build deep learning experiences for active engagement in the arts.
+# A deep learning platform to reach new audiences and promote active engagement in the arts.
 
 ## How It Works:
-First, you provide us with music/art/culture, and our team of educators and technologists will build **custom learning modules** around your content.
+First, our team of educators and technologists build **custom learning modules** around your music/art/culture.
 
 [Image showing a musical score -> web app on a screen]
 
-Then, your new content is posted in the Project Playgrounds **web platform** for people around the world to use. You will also receive links to embed your new modules on your website and send them directly to your audience.
+Then, your new content is posted in the Project Playgrounds **web platform** for the world to enjoy. It is also embeddable for you to post on your website and share directly to your audience.
 
 [Image showing a computer app and web app with a list of branded modules and one module that says "Your Content Here"]
 
