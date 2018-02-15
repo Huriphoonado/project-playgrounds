@@ -10,18 +10,18 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
-    <section class="page-header">
+    <!--<section class="page-header">
       <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
       {% if site.github.is_project_page %}
-        <!--<a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>-->
+        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
       {% endif %}
       {% if site.show_downloads %}
         <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
-    </section>
-
+  </section>-->
+    <img src="assets/images/temp-landingpage.jpg" class='footer-image'/>
     <section class="main-content">
       {{ content }}
 
@@ -31,21 +31,45 @@
               <input type="text" name="entry.1977597640" id="entry.1977597640" placeholder="Your Name"><br />
               <input type="text" name="entry.405132639" id="entry.405132639" placeholder="Your Organization"><br />
               <input type="email" name="entry.175918401" id="entry.175918401" placeholder="Your Email"><br />
-              <input type="submit" value="Submit" id="submit-button" class="submit-btn">
+              <input type="submit" value="Submit Information" id="submit-button" class="submit-btn">
               <span id='error-text'></span>
+          </form>
+          <form name="extra-form" id="extra-form" enctype="text/plain" action=" https://docs.google.com/forms/d/e/1FAIpQLSfyDg_gYZ-MLcbnD3uc44Bub27cJDpsPPQ0-9eMLubcZTG0zA/formResponse?" target="hidden_iframe" style="display:none;" onsubmit="return extra_info()">
+              <br />
+              <hr class='darker'>
+              <b>If you would also be so kind:</b><br /><br />
+              Would you like to reach a wider audience by joining a consortium of cultural institutions around the world?
+              <select name="entry.1977597640" id="entry.1977597640">
+                  <option value=0>N/A</option>
+                  <option value=4>Very Willing</option>
+                  <option value=3>Willing</option>
+                  <option value=2>Not Very Willing</option>
+                  <option value=1>Opposed to the Idea</option>
+              </select><br /><br />
+              How valuable is it for your organization to own tools to support your own development/monitoring of digital content?
+              <select name="entry.405132639" id="entry.405132639">
+                  <option value=0>N/A</option>
+                  <option value=4>Very Valuable</option>
+                  <option value=3>Valuable</option>
+                  <option value=2>Not Very Valuable</option>
+                  <option value=1>Opposed to the Idea</option>
+              </select><br /><br />
+              <input type="submit" value="Send Feedback" id="submit-button2" class="submit-btn">
+              <span id='thanks-text2'></span>
           </form>
           <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
       </div>
 
       <script type="text/javascript">
+
       function val_form() {
           let gForm = document.getElementById('gform');
+          let exForm = document.getElementById('extra-form');
           let eText = document.getElementById('error-text');
           let nmElem = document.getElementById('entry.1977597640').value;
           let ogElem = document.getElementById('entry.405132639').value;
           let emElem = document.getElementById('entry.175918401').value;
           let sbtn = document.getElementById('submit-button');
-
 
           if (nmElem.length == 0 || ogElem.length == 0 || emElem.length == 0) {
               eText.innerHTML = '';
@@ -58,21 +82,27 @@
               eText.append("Thank You! We'll be in touch soon.");
               console.log(sbtn);
               sbtn.disabled = true;
+              exForm.style.display = "block";
               return true;
           }
       }
-      /*let gForm = document.getElementById('gform');
-      console.log(gForm)
-      gForm.addEventListener('submit', function(e) {
-          gForm.append("Thanks! We'll be in touch soon.")
-      });*/
+
+      function extra_info() {
+          let thanks = document.getElementById('thanks-text2');
+          let sbtn2 = document.getElementById('submit-button2');
+
+          thanks.innerHTML = 'Thank you again!';
+          sbtn2.disabled = true;
+          return true;
+
+      }
       </script>
 
       <footer class="site-footer">
         We are a team of technologists, designers, and educators from NYU responsible for the <a href="https://apps.musedlab.org/groovepizza" target="_blank">Groove Pizza</a>, <a href="https://apps.musedlab.org/aqwertyon" target="_blank">AQWERTYON</a>, and <a href="https://apps.musedlab.org/variation-playground/" target="_blank">Variation Playgrounds</a>.
       </footer>
     </section>
-    <img src="assets/images/diana-mountains2.svg" class='footer-image'/>
+    <img src="assets/images/diana-mountains3.svg" class='footer-image'/>
 
     {% if site.google_analytics %}
       <script type="text/javascript">
